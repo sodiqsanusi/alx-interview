@@ -12,20 +12,20 @@ the Pascal's Triangle.
 
 
 def pascal_triangle(n):
-  """
-  Takes in an integer input, creates a pascal triangle
-  of that size
-  """
-  lilac = []
-  if n <= 0:
-    return (lilac)
-  elif n >= 1:
-    lilac.append([1])
-  for i in range(n - 1):
-    violet = []
-    temp = [0] + lilac[-1] + [0]
-    for j in range(len(lilac[-1]) + 1):
-      violet.append(temp[j] + temp[j + 1])
-    lilac.append(violet)
+    """
+    Takes in an integer input, creates a pascal triangle
+    of that size
+    """
+    lilac = []
+    if n <= 0:
+        return (lilac)
+    elif n >= 1:
+        lilac.append([1])
+    for i in range(n - 1):
+        violet = []
+        temp = [0] + lilac[-1] + [0]
+        for j in range(len(lilac[-1]) + 1):
+            violet.append(temp[j] + temp[j + 1])
+        lilac.append(violet)
 
-  return (lilac)
+    return (lilac)
